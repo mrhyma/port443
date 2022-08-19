@@ -18,7 +18,6 @@ class Joke:
 def getJoke():
 	the_response = requests.request("GET", url, headers=headers)
 	data = the_response.json()
-	print(data['body'][0]['setup'])
 	joke = Joke(data['body'][0]['setup'], data['body'][0]['punchline'])
 	return joke
 
