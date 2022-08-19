@@ -1,10 +1,14 @@
 
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 url = "https://dad-jokes.p.rapidapi.com/random/joke"
 
 headers = {
-	"X-RapidAPI-Key": "b76b26b0ddmshee0f5fc6c5ffb25p176bf4jsn11584385ec44",
+	"X-RapidAPI-Key": os.getenv("X_RAPIDAPI_KEY"),
 	"X-RapidAPI-Host": "dad-jokes.p.rapidapi.com"
 }
 
